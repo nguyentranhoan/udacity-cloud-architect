@@ -1,0 +1,59 @@
+MySQL [(none)]> use udacity;
+Database changed
+MySQL [udacity]> CREATE TABLE employees (id INT PRIMARY KEY AUTO_INCREMENT,first_name VARCHAR(50),last_name VARCHAR(50),department VARCHAR(50),salary DECIMAL(10, 2));
+Query OK, 0 rows affected (0.088 sec)
+
+MySQL [udacity]> INSERT INTO employees (first_name, last_name, department, salary)
+    -> VALUES
+    ->     ('John', 'Doe', 'Engineering', 75000.00),
+    ->     ('Jane', 'Smith', 'Marketing', 60000.00),
+    ->     ('Michael', 'Johnson', 'Finance', 80000.00);
+Query OK, 3 rows affected (0.010 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MySQL [udacity]> SELECT * FROM employees;
++----+------------+-----------+-------------+----------+
+| id | first_name | last_name | department  | salary   |
++----+------------+-----------+-------------+----------+
+|  1 | John       | Doe       | Engineering | 75000.00 |
+|  2 | Jane       | Smith     | Marketing   | 60000.00 |
+|  3 | Michael    | Johnson   | Finance     | 80000.00 |
++----+------------+-----------+-------------+----------+
+3 rows in set (0.001 sec)
+
+MySQL [udacity]> SELECT first_name, last_name, salary FROM employees;
++------------+-----------+----------+
+| first_name | last_name | salary   |
++------------+-----------+----------+
+| John       | Doe       | 75000.00 |
+| Jane       | Smith     | 60000.00 |
+| Michael    | Johnson   | 80000.00 |
++------------+-----------+----------+
+3 rows in set (0.001 sec)
+
+MySQL [udacity]> SELECT first_name, last_name, salary FROM employees WHERE salary > 70000;
++------------+-----------+----------+
+| first_name | last_name | salary   |
++------------+-----------+----------+
+| John       | Doe       | 75000.00 |
+| Michael    | Johnson   | 80000.00 |
++------------+-----------+----------+
+2 rows in set (0.001 sec)
+
+MySQL [udacity]> SELECT first_name, last_name, salary FROM employees ORDER BY salary DESC;
++------------+-----------+----------+
+| first_name | last_name | salary   |
++------------+-----------+----------+
+| Michael    | Johnson   | 80000.00 |
+| John       | Doe       | 75000.00 |
+| Jane       | Smith     | 60000.00 |
++------------+-----------+----------+
+3 rows in set (0.002 sec)
+
+MySQL [udacity]> SELECT first_name, last_name, salary FROM employees ORDER BY salary DESC LIMIT 2;
++------------+-----------+----------+
+| first_name | last_name | salary   |
++------------+-----------+----------+
+| Michael    | Johnson   | 80000.00 |
+| John       | Doe       | 75000.00 |
++------------+-----------+----------+

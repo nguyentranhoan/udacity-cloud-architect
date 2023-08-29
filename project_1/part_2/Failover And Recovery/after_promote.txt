@@ -1,0 +1,29 @@
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.33 Source distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MySQL [(none)]> use udacity;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MySQL [udacity]> INSERT INTO employees (first_name, last_name, department, salary) VALUES     ('John', 'Doe', 'Engineering', 75000.00),     ('Jane', 'Smith', 'Marketing', 60000.00),     ('Michael', 'Johnson', 'Finance', 80000.00);
+Query OK, 3 rows affected (0.019 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+MySQL [udacity]> SELECT * FROM employees;
++----+------------+-----------+-------------+----------+
+| id | first_name | last_name | department  | salary   |
++----+------------+-----------+-------------+----------+
+|  1 | John       | Doe       | Engineering | 75000.00 |
+|  2 | Jane       | Smith     | Marketing   | 60000.00 |
+|  3 | Michael    | Johnson   | Finance     | 80000.00 |
+|  4 | John       | Doe       | Engineering | 75000.00 |
+|  5 | Jane       | Smith     | Marketing   | 60000.00 |
+|  6 | Michael    | Johnson   | Finance     | 80000.00 |
++----+------------+-----------+-------------+----------+
+6 rows in set (0.001 sec)
