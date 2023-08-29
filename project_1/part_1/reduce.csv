@@ -1,0 +1,21 @@
+﻿Estimate summary
+Upfront cost,Monthly cost,Total 12 months cost,Currency
+0,6501.040000000001,78012.48,USD
+,,* Includes upfront cost
+
+
+Detailed Estimate
+Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Status,Configuration summary
+My Estimate,US East (N. Virginia),,Amazon RDS for MySQL,0,943.8,11325.60,USD,,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (30 GB), Quantity (2), Instance type (db.m1.xlarge), Utilization (On-Demand only) (500 Hours/Month), Deployment option (Multi-AZ), Pricing strategy (OnDemand)"
+My Estimate,US East (N. Virginia),,Network Address Translation (NAT) Gateway,0,33.39,400.68,USD,,Number of NAT Gateways (1)
+My Estimate,US East (N. Virginia),,Gateway Load Balancer,0,31.03,372.36,USD,,"Number of Availability Zones that Gateway Load Balancer is deployed to (2), Number of Gateway Load Balancer Endpoints (1), Average connection/flow duration (122 seconds), Average number of new connections/flows (12 per second), Total processed bytes (1 GB per hour)"
+My Estimate,US East (N. Virginia),,Amazon CloudFront,0,0.09,1.08,USD,,"Data transfer out to internet (1 GB per month), Data transfer out to origin (0 GB per month), Number of requests (HTTPS) (10 per month)"
+My Estimate,US East (N. Virginia),,Application Load Balancer,0,1492.85,17914.20,USD,,Number of Application Load Balancers (2)
+My Estimate,US East (N. Virginia),,S3 Standard,0,2304.28,27651.36,USD,,"S3 Standard storage (100 TB per month), PUT, COPY, POST, LIST requests to S3 Standard (1000), GET, SELECT, and all other requests from S3 Standard (1000), Data returned by S3 Select (100 GB per month), Data scanned by S3 Select (100 GB per month)"
+My Estimate,US East (N. Virginia),,S3 Management and Insights,0,2.3,27.60,USD,,"S3 Storage Lens Objects (10 million per month), Size of encrypted data (100 GB)"
+My Estimate,US East (N. Virginia),,Amazon EC2 ,0,1693.296,20319.55,USD,,"Tenancy (Shared Instances), Operating system (Linux), Workload (Consistent, Number of instances: 4), Advance EC2 instance (t3a.small), Pricing strategy (On-Demand Utilization: 100 %Utilized/Month), Enable monitoring (disabled), EBS Storage amount (5 TB), DT Inbound: Not selected (0 TB per month), DT Outbound: Not selected (0 TB per month), DT Intra-Region: (0 TB per month)"
+
+
+
+Acknowledgement
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services."
