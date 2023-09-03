@@ -1,0 +1,17 @@
+# Describe GuardDuty findings that were detected related to the brute force attack
+
+UnauthorizedAccess:EC2/SSHBruteForce
+
+AttackInstance is performing SSH brute force attacks against WebInstance.
+Brute force attack is used for gaining unauthorized access to target instance by guessing the SSH password.
+
+# Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information.
+Documentation:
+
+"Amazon GuardDuty is a continuous security monitoring service that analyzes and processes the
+following data sources: VPC Flow Logs, AWS CloudTrail event logs, and DNS logs"
+
+The finding is generated only via GuardDuty monitoring traffic on port 22.
+If your SSH services are using other ports, the finding is not able to generate.
+The attack attempts will be recored by VPC Flow Logs.
+

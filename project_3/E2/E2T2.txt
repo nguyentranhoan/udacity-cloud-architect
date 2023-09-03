@@ -1,0 +1,15 @@
+Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
+
+- Ensure no security groups allow ingress from 0.0.0.0/0 to port 22.
+- Ensure VPC flow logging is enabled in all VPCs.
+- Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389.
+- TCP/UDP port 23 which is associated with 'Telnet' is reachable from the internet.
+- TCP/UDP port 20 and 21 which are associated with 'FTP' is reachable from the internet.
+- S3 buckets server-side encryption should be enabled. 
+
+Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+- Encrypt s3 buckets/EC2 volumes
+- Specify IP address range for security groups ingress on port 22
+- Enable VPC flow logging
+- Remove access to all the mentioned ports reachable from the internet
